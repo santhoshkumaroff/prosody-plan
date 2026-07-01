@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosody Intelligence Framework v1.5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon"></div>
+                <span>Prosody v1.5</span>
+            </a>
+            <div class="nav-links">
+                <a href="#recordings">Recordings</a>
+                <a href="#metrics">Metrics</a>
+                <a href="#comparison">Praat Comparison</a>
+                <a href="#validation">Validation</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Production Candidate v1.5
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Prosody Intelligence</span>
+                    <br>Framework
+                </h1>
+                <p class="hero-subtitle">
+                    Helping students become expressive, confident readers through automated reading assessment.
+                </p>
+                <div class="hero-actions">
+                    <a href="#recordings" class="btn btn-primary">
+                        Explore Recordings
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#metrics" class="btn btn-secondary">View Metrics</a>
+                </div>
+            </div>
+
+            <!-- Recording Progression -->
+            <div class="recording-progression">
+                <div class="recording-card" data-recording="1">
+                    <div class="recording-icon">1</div>
+                    <h3>Chunk Reading</h3>
+                    <div class="metric-tags">
+                        <span>Pause</span>
+                        <span>Rhythm</span>
+                        <span>Stress</span>
+                        <span>Fluency</span>
+                        <span>Pitch</span>
+                    </div>
+                </div>
+                <div class="progression-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+                <div class="recording-card" data-recording="2">
+                    <div class="recording-icon">2</div>
+                    <h3>Sentence Reading</h3>
+                    <div class="metric-tags">
+                        <span>Pause</span>
+                        <span>Rhythm</span>
+                        <span>Stress</span>
+                        <span>Fluency</span>
+                        <span>Intonation</span>
+                    </div>
+                </div>
+                <div class="progression-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+                <div class="recording-card" data-recording="3">
+                    <div class="recording-icon">3</div>
+                    <h3>Paragraph Reading</h3>
+                    <div class="metric-tags">
+                        <span>Pause</span>
+                        <span>Rhythm</span>
+                        <span>Stress</span>
+                        <span>Fluency</span>
+                        <span>Intonation</span>
+                        <span>Expression</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recording Architecture Section -->
+    <section id="recordings" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recording Architecture</h2>
+                <p>Three progressive recording types, each building on the previous to capture comprehensive reading assessment</p>
+            </div>
+
+            <div class="recordings-grid">
+                <!-- Recording 1 -->
+                <div class="recording-detail-card">
+                    <div class="recording-header">
+                        <div class="recording-number">1</div>
+                        <div>
+                            <h3>Chunk Reading</h3>
+                            <p class="recording-subtitle">Recording 1</p>
+                        </div>
+                    </div>
+                    <div class="recording-body">
+                        <div class="recording-info">
+                            <div class="info-item">
+                                <span class="info-label">Purpose</span>
+                                <span class="info-value">Evaluate individual phrase/chunk fluency</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Educational Objective</span>
+                                <span class="info-value">Chunk Mastery</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Aggregation</span>
+                                <code class="info-code">mean(chunk_scores)</code>
+                            </div>
+                        </div>
+                        <div class="recording-metrics">
+                            <h4>Metrics Included</h4>
+                            <div class="metrics-list">
+                                <div class="metric-item">
+                                    <span class="metric-name">Pause</span>
+                                    <span class="metric-desc">Inter-word pause quality</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Rhythm</span>
+                                    <span class="metric-desc">Speech rate regularity</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Stress</span>
+                                    <span class="metric-desc">Word emphasis patterns</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Fluency</span>
+                                    <span class="metric-desc">Speed and smoothness balance</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Pitch</span>
+                                    <span class="metric-desc">F0 variability (parallel dimension)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recording 2 -->
+                <div class="recording-detail-card">
+                    <div class="recording-header">
+                        <div class="recording-number">2</div>
+                        <div>
+                            <h3>Sentence Reading</h3>
+                            <p class="recording-subtitle">Recording 2</p>
+                        </div>
+                    </div>
+                    <div class="recording-body">
+                        <div class="recording-info">
+                            <div class="info-item">
+                                <span class="info-label">Purpose</span>
+                                <span class="info-value">Add sentence-level prosody and intonation</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Educational Objective</span>
+                                <span class="info-value">Sentence Flow</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Aggregation</span>
+                                <code class="info-code">0.30 × chunk + 0.70 × sentence</code>
+                            </div>
+                        </div>
+                        <div class="recording-metrics">
+                            <h4>Metrics Included</h4>
+                            <div class="metrics-list">
+                                <div class="metric-item">
+                                    <span class="metric-name">Pause</span>
+                                    <span class="metric-desc">Inter-word pause quality</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Rhythm</span>
+                                    <span class="metric-desc">Speech rate regularity</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Stress</span>
+                                    <span class="metric-desc">Word emphasis patterns</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Fluency</span>
+                                    <span class="metric-desc">Speed and smoothness balance</span>
+                                </div>
+                                <div class="metric-item highlight">
+                                    <span class="metric-name">Intonation</span>
+                                    <span class="metric-desc">Terminal contour detection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recording 3 -->
+                <div class="recording-detail-card">
+                    <div class="recording-header">
+                        <div class="recording-number">3</div>
+                        <div>
+                            <h3>Paragraph Reading</h3>
+                            <p class="recording-subtitle">Recording 3</p>
+                        </div>
+                    </div>
+                    <div class="recording-body">
+                        <div class="recording-info">
+                            <div class="info-item">
+                                <span class="info-label">Purpose</span>
+                                <span class="info-value">Full paragraph expression and consistency</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Educational Objective</span>
+                                <span class="info-value">Paragraph Expression</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Aggregation</span>
+                                <code class="info-code">0.20 × chunk + 0.30 × sentence + 0.50 × paragraph</code>
+                            </div>
+                        </div>
+                        <div class="recording-metrics">
+                            <h4>Metrics Included</h4>
+                            <div class="metrics-list">
+                                <div class="metric-item">
+                                    <span class="metric-name">Pause</span>
+                                    <span class="metric-desc">Inter-word pause quality</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Rhythm</span>
+                                    <span class="metric-desc">Speech rate regularity</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Stress</span>
+                                    <span class="metric-desc">Word emphasis patterns</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">Fluency</span>
+                                    <span class="metric-desc">Speed and smoothness balance</span>
+                                </div>
+                                <div class="metric-item highlight">
+                                    <span class="metric-name">Intonation</span>
+                                    <span class="metric-desc">Terminal contour detection</span>
+                                </div>
+                                <div class="metric-item highlight">
+                                    <span class="metric-name">Expression</span>
+                                    <span class="metric-desc">Composite expression score</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="metrics" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Metrics</h2>
+                <p>Eight metrics designed to capture different aspects of reading fluency and expression</p>
+            </div>
+
+            <div class="metrics-accordion">
+                <!-- Pause -->
+                <div class="metric-card" data-metric="pause">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">P</span>
+                            <span>Pause</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Measures the quality and appropriateness of inter-word silence duration during reading.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Pausing demonstrates comprehension and natural phrasing. Children who pause appropriately show better text understanding.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">pause_score = 0.60 × threshold + 0.25 × consistency + 0.15 × variation</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> 10 words, 9 gaps, 7 in optimal range (100-800ms)</p>
+                                <p><strong>Calculation:</strong> 0.60 × 78 + 0.25 × 78 + 0.15 × 80</p>
+                                <p><strong>Result:</strong> 78/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Natural, comprehension-indicating pauses</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Appropriate pausing with minor issues</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Pausing patterns suggest reading difficulty</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Pausing is a primary indicator of reading comprehension. Research shows that skilled readers pause at phrase boundaries and sentence endings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rhythm -->
+                <div class="metric-card" data-metric="rhythm">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">R</span>
+                            <span>Rhythm</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Measures the regularity and consistency of speech timing during reading.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Regular rhythm indicates fluent reading with consistent pacing. Irregular rhythm suggests decoding difficulty.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">cv = stdev(intervals) / mean(intervals)
+rhythm_score = stability(cv)  # Piecewise mapping</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> Intervals [320, 340, 310, 350, 330]ms</p>
+                                <p><strong>Calculation:</strong> CV = 15.8 / 330 = 0.048</p>
+                                <p><strong>Result:</strong> 100/100 (CV &lt; 0.1)</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Consistent, fluent pacing</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Generally regular with minor variations</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Highly irregular pacing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Rhythm reflects automaticity in reading. Fluent readers maintain consistent pace; struggling readers show irregular patterns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stress -->
+                <div class="metric-card" data-metric="stress">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">S</span>
+                            <span>Stress</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Measures the prominence and emphasis patterns of words during reading.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Stress patterns indicate understanding of word importance and sentence structure.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">stress = 0.40 × duration + 0.30 × f0 + 0.30 × energy</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> Duration: 0.75, F0: 0.65, Energy: 0.70</p>
+                                <p><strong>Calculation:</strong> 0.40 × 75 + 0.30 × 65 + 0.30 × 70</p>
+                                <p><strong>Result:</strong> 71/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Clear word emphasis patterns</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Appropriate stress with minor issues</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Flat or inappropriate stress</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Stress indicates word importance understanding. Children who stress important words demonstrate better comprehension.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fluency -->
+                <div class="metric-card" data-metric="fluency">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">F</span>
+                            <span>Fluency</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Combines reading speed and smoothness into a single measure.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Fluency is the foundation of reading comprehension. Fluent readers process text efficiently.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">fluency = (rate_score + pause_score) / 2</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> Rate: 2.5 words/sec, Pause ratio: 0.15</p>
+                                <p><strong>Calculation:</strong> (100 + 100) / 2</p>
+                                <p><strong>Result:</strong> 100/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Fluent, efficient reading</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Generally fluent with minor issues</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Significant fluency difficulties</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Fluency strongly correlates with comprehension. Research shows fluency is a primary indicator of reading proficiency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pitch -->
+                <div class="metric-card" data-metric="pitch">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">Pi</span>
+                            <span>Pitch</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Measures F0 (fundamental frequency) variability and range during reading.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Pitch variation indicates expressiveness and engagement. Monotone reading suggests limited engagement.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">pitch_score = (range_score × 0.5 + var_score × 0.5) × 100</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> F0 range: 45Hz, Variability: 0.08</p>
+                                <p><strong>Calculation:</strong> (90 × 0.5 + 80 × 0.5)</p>
+                                <p><strong>Result:</strong> 85/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Expressive pitch variation</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Appropriate pitch patterns</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Monotone or inappropriate pitch</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Pitch variation indicates expressiveness and engagement with the text.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intonation -->
+                <div class="metric-card" data-metric="intonation">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">I</span>
+                            <span>Intonation</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Detects terminal contour patterns (falling, rising, flat) at sentence endings.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Intonation indicates sentence type understanding. Questions rise, statements fall.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">intonation = (0.40 × contour + 0.30 × range + 0.30 × variance) × confidence</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> Contour: 60, Range: 50, Variance: 45, Confidence: 0.8</p>
+                                <p><strong>Calculation:</strong> (0.40 × 60 + 0.30 × 50 + 0.30 × 45) × 0.8</p>
+                                <p><strong>Result:</strong> 42/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Appropriate sentence-level intonation</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Generally correct with minor issues</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Incorrect or missing intonation patterns</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Intonation demonstrates understanding of sentence meaning. This is a key indicator of reading comprehension.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expression -->
+                <div class="metric-card" data-metric="expression">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">E</span>
+                            <span>Expression</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Combines multiple prosodic elements into a single measure of reading expressiveness.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Expression captures the overall prosodic quality of reading.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">expression = 0.30 × Intonation + 0.25 × Stress + 0.20 × Fluency + 0.15 × Pause + 0.10 × Rhythm</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> Intonation: 70, Stress: 65, Fluency: 80, Pause: 75, Rhythm: 85</p>
+                                <p><strong>Calculation:</strong> 0.30 × 70 + 0.25 × 65 + 0.20 × 80 + 0.15 × 75 + 0.10 × 85</p>
+                                <p><strong>Result:</strong> 73/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Highly expressive reading</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Appropriate expression</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Flat or inappropriate expression</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Expression is the ultimate indicator of reading fluency and comprehension.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paragraph Prosody -->
+                <div class="metric-card" data-metric="paragraph">
+                    <button class="metric-card-header">
+                        <div class="metric-card-title">
+                            <span class="metric-letter">PP</span>
+                            <span>Paragraph Prosody</span>
+                        </div>
+                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="metric-card-content">
+                        <div class="metric-section">
+                            <h4>What is this metric?</h4>
+                            <p>Evaluates sustained reading quality across multiple sentences.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Why do we use this metric?</h4>
+                            <p>Paragraphs reveal sustained expression patterns and sentence-to-sentence consistency.</p>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Formula</h4>
+                            <pre class="formula">paragraph = 0.30 × Expression + 0.20 × Intonation + 0.20 × Fluency + 0.15 × Stress + 0.10 × Pause + 0.05 × Rhythm</pre>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Example</h4>
+                            <div class="example-box">
+                                <p><strong>Input:</strong> Expression: 73, Intonation: 57, Fluency: 85, Stress: 71, Pause: 78, Rhythm: 92</p>
+                                <p><strong>Calculation:</strong> 0.30 × 73 + 0.20 × 57 + 0.20 × 85 + 0.15 × 71 + 0.10 × 78 + 0.05 × 92</p>
+                                <p><strong>Result:</strong> 73/100</p>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Score Interpretation</h4>
+                            <div class="score-grid">
+                                <div class="score-item high">
+                                    <span class="score-range">80-100</span>
+                                    <span class="score-meaning">Excellent: Sustained, expressive paragraph reading</span>
+                                </div>
+                                <div class="score-item medium">
+                                    <span class="score-range">60-79</span>
+                                    <span class="score-meaning">Good: Generally expressive with minor issues</span>
+                                </div>
+                                <div class="score-item low">
+                                    <span class="score-range">0-39</span>
+                                    <span class="score-meaning">Poor: Significant paragraph reading difficulties</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metric-section">
+                            <h4>Educational Relevance</h4>
+                            <p>Paragraph prosody indicates advanced reading skills and sustained comprehension.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Praat Comparison Section -->
+    <section id="comparison" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Implementation vs Praat</h2>
+                <p>An honest comparison of our educational-grade system against research-grade Praat</p>
+            </div>
+
+            <!-- Terminology -->
+            <div class="terminology-grid">
+                <div class="terminology-card">
+                    <div class="terminology-icon r">R</div>
+                    <h3>Research-grade</h3>
+                    <p>Praat's acoustic analysis capabilities</p>
+                </div>
+                <div class="terminology-card">
+                    <div class="terminology-icon e">E</div>
+                    <h3>Educational-grade</h3>
+                    <p>Our system's teacher-focused interpretation</p>
+                </div>
+                <div class="terminology-card">
+                    <div class="terminology-icon p">P</div>
+                    <h3>Production-grade</h3>
+                    <p>Our system's real-time deployment capability</p>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Our System</th>
+                            <th>Praat Equivalent</th>
+                            <th>Advantages</th>
+                            <th>Limitations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pause</strong></td>
+                            <td>Threshold-based scoring (0-100)</td>
+                            <td>Duration analysis, silence detection</td>
+                            <td>Educational context, real-time scoring</td>
+                            <td>Simplified thresholds</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rhythm</strong></td>
+                            <td>CV-based stability scoring</td>
+                            <td>VarcoV, Pairwise Variability Index</td>
+                            <td>Simple, interpretable metric</td>
+                            <td>Less precise phoneme-level analysis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stress</strong></td>
+                            <td>3D prominence model</td>
+                            <td>Intensity + duration + F0 analysis</td>
+                            <td>Multi-dimensional model</td>
+                            <td>Requires F0 + energy extraction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fluency</strong></td>
+                            <td>Rate + pause ratio combination</td>
+                            <td>Speech rate analysis, pause detection</td>
+                            <td>Combined metric</td>
+                            <td>Age-dependent thresholds not implemented</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pitch</strong></td>
+                            <td>Range + variability scoring</td>
+                            <td>F0 tracking, pitch analysis</td>
+                            <td>Simple scoring</td>
+                            <td>Requires audio file access</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Intonation</strong></td>
+                            <td>Automated contour detection</td>
+                            <td>F0 analysis, ToBI annotation</td>
+                            <td>Automated detection</td>
+                            <td>Simplified contour detection</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Expression</strong></td>
+                            <td>Weighted combination of 5 metrics</td>
+                            <td>No direct equivalent</td>
+                            <td>Unique capability</td>
+                            <td>Weighted combination</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Paragraph</strong></td>
+                            <td>Sentence aggregation model</td>
+                            <td>No direct equivalent</td>
+                            <td>Unique capability</td>
+                            <td>Complex aggregation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- What Praat Does Better -->
+            <div class="comparison-cards">
+                <div class="comparison-card praat">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        What Praat Does Better
+                    </h3>
+                    <ul>
+                        <li><strong>Research-grade F0 extraction:</strong> Autocorrelation and cross-correlation methods with decades of refinement</li>
+                        <li><strong>Advanced intensity analysis:</strong> Detailed intensity contours and dB measurements</li>
+                        <li><strong>Decades of phonetic validation:</strong> Validated against human perception in hundreds of studies</li>
+                        <li><strong>Rich acoustic tooling:</strong> Spectrograms, formant analysis, voice quality metrics</li>
+                    </ul>
+                </div>
+                <div class="comparison-card ours">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        What Our System Does Better
+                    </h3>
+                    <ul>
+                        <li><strong>Educational interpretation:</strong> Metrics designed for teachers, not phoneticians</li>
+                        <li><strong>Recording 1/2/3 progression:</strong> Matches curriculum structure</li>
+                        <li><strong>Teacher-friendly scoring:</strong> 0-100 scores with clear interpretations</li>
+                        <li><strong>Real-time production deployment:</strong> Sub-2ms latency for live assessment</li>
+                        <li><strong>Explainable outputs:</strong> Each metric has clear educational meaning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Validation Section -->
+    <section id="validation" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Validation Status</h2>
+                <p>Engineering validation complete, classroom calibration pending</p>
+            </div>
+
+            <div class="validation-grid">
+                <div class="validation-card">
+                    <div class="validation-icon complete">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>180+ Automated Tests</h3>
+                    <p>Comprehensive regression coverage across all metrics and recording types</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+                <div class="validation-card">
+                    <div class="validation-icon complete">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Performance Targets Met</h3>
+                    <p>Sub-2ms latency, &lt;12KB memory footprint</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+                <div class="validation-card">
+                    <div class="validation-icon complete">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Backward Compatibility</h3>
+                    <p>API response shape unchanged when prosody disabled</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+                <div class="validation-card">
+                    <div class="validation-icon complete">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                        </svg>
+                    </div>
+                    <h3>Rollback Support</h3>
+                    <p>Feature flags enable instant rollback</p>
+                    <span class="status-badge complete">Complete</span>
+                </div>
+                <div class="validation-card">
+                    <div class="validation-icon pending">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Classroom Calibration</h3>
+                    <p>Pending teacher correlation study</p>
+                    <span class="status-badge pending">Pending</span>
+                </div>
+            </div>
+
+            <!-- Feature Flags -->
+            <div class="feature-flags">
+                <h3>Feature Flags & Rollback</h3>
+                <div class="flags-grid">
+                    <div class="flag-card">
+                        <code class="flag-name">ENABLE_PROSODY</code>
+                        <span class="flag-default">Default: true</span>
+                        <p>Master switch for all prosody evaluation</p>
+                        <div class="flag-rollback">
+                            <strong>Rollback:</strong> Set to false to instantly disable
+                        </div>
+                    </div>
+                    <div class="flag-card">
+                        <code class="flag-name">ENABLE_F0_INTONATION</code>
+                        <span class="flag-default">Default: false</span>
+                        <p>Enables F0-based intonation (Recording 2+)</p>
+                        <div class="flag-rollback">
+                            <strong>Rollback:</strong> Set to false to disable intonation
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Version History -->
+            <div class="version-history">
+                <h3>Version Governance</h3>
+                <div class="version-list">
+                    <div class="version-item">
+                        <span class="version-number">1.0</span>
+                        <div class="version-info">
+                            <span class="version-status">Initial implementation</span>
+                            <span class="version-date">June 2026</span>
+                        </div>
+                    </div>
+                    <div class="version-item">
+                        <span class="version-number">1.2</span>
+                        <div class="version-info">
+                            <span class="version-status">Linguistic pause model</span>
+                            <span class="version-date">June 2026</span>
+                        </div>
+                    </div>
+                    <div class="version-item">
+                        <span class="version-number">1.4</span>
+                        <div class="version-info">
+                            <span class="version-status">Recording 2 aggregation</span>
+                            <span class="version-date">June 2026</span>
+                        </div>
+                    </div>
+                    <div class="version-item current">
+                        <span class="version-number">1.5</span>
+                        <div class="version-info">
+                            <span class="version-status">Recording 3, expression</span>
+                            <span class="version-date">June 2026</span>
+                        </div>
+                        <span class="current-badge">Current</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Recommendations Section -->
+    <section id="recommendations" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Final Recommendations</h2>
+                <p>Educational guidance and honest limitations</p>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <h3>Educational Recommendations</h3>
+                    <ul>
+                        <li>Use Recording 1 for initial assessment and progress monitoring</li>
+                        <li>Use Recording 2 for comprehension assessment</li>
+                        <li>Use Recording 3 for comprehensive fluency evaluation</li>
+                        <li>Teacher judgment remains essential for instructional decisions</li>
+                    </ul>
+                </div>
+                <div class="recommendation-card">
+                    <h3>Honest Limitations</h3>
+                    <ul>
+                        <li>All weights are engineering heuristics</li>
+                        <li>Requires classroom validation</li>
+                        <li>May need cultural adjustments</li>
+                        <li>Not a replacement for teacher judgment</li>
+                    </ul>
+                </div>
+                <div class="recommendation-card">
+                    <h3>Future Validation Approach</h3>
+                    <ul>
+                        <li>Collect 10-20 real Recording 1/2/3 samples</li>
+                        <li>Teachers rate each recording (1-5 scale)</li>
+                        <li>Compare teacher ratings with prosody scores</li>
+                        <li>Calculate Pearson correlation coefficient</li>
+                        <li>If r ≥ 0.6: GO; if r &lt; 0.6: NO-GO</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="final-statement">
+                <p>The Prosody Intelligence Framework v1.5 is a <strong>Production Candidate</strong> undergoing Controlled Production Rollout. It provides automated, objective assessment of oral reading fluency for children ages 5-12.</p>
+                <p>The system is designed to <strong>assist teachers, not replace them</strong>. It provides objective metrics that can inform instructional decisions, but teacher judgment remains essential.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Prosody Intelligence Framework. All rights reserved.</p>
+                <p>Version 1.5 | Production Candidate</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
