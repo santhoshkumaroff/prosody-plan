@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosody Intelligence Framework v1.5</title>
+    <title>Prosody Intelligence Framework</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <div class="logo-icon"></div>
-                <span>Prosody v1.5</span>
+                <span>Prosody</span>
             </a>
             <div class="nav-links">
                 <a href="#recordings">Recordings</a>
@@ -38,7 +38,7 @@
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
-                    Production Candidate v1.5
+                    Production Candidate
                 </div>
                 <h1 class="hero-title">
                     <span class="gradient-text">Prosody Intelligence</span>
@@ -68,7 +68,6 @@
                         <span>Pause</span>
                         <span>Rhythm</span>
                         <span>Stress</span>
-                        <span>Fluency</span>
                         <span>Pitch</span>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
                         <span>Pause</span>
                         <span>Rhythm</span>
                         <span>Stress</span>
-                        <span>Fluency</span>
+                        <span>Pitch</span>
                         <span>Intonation</span>
                     </div>
                 </div>
@@ -102,9 +101,9 @@
                         <span>Pause</span>
                         <span>Rhythm</span>
                         <span>Stress</span>
-                        <span>Fluency</span>
-                        <span>Intonation</span>
+                        <span>Pitch</span>
                         <span>Expression</span>
+                        <span>Flow</span>
                     </div>
                 </div>
             </div>
@@ -160,12 +159,8 @@
                                     <span class="metric-desc">Word emphasis patterns</span>
                                 </div>
                                 <div class="metric-item">
-                                    <span class="metric-name">Fluency</span>
-                                    <span class="metric-desc">Speed and smoothness balance</span>
-                                </div>
-                                <div class="metric-item">
                                     <span class="metric-name">Pitch</span>
-                                    <span class="metric-desc">F0 variability (parallel dimension)</span>
+                                    <span class="metric-desc">F0 variability</span>
                                 </div>
                             </div>
                         </div>
@@ -212,12 +207,16 @@
                                     <span class="metric-desc">Word emphasis patterns</span>
                                 </div>
                                 <div class="metric-item">
-                                    <span class="metric-name">Fluency</span>
-                                    <span class="metric-desc">Speed and smoothness balance</span>
+                                    <span class="metric-name">Pitch</span>
+                                    <span class="metric-desc">F0 variability</span>
                                 </div>
                                 <div class="metric-item highlight">
                                     <span class="metric-name">Intonation</span>
                                     <span class="metric-desc">Terminal contour detection</span>
+                                </div>
+                                <div class="metric-item highlight">
+                                    <span class="metric-name">Expression</span>
+                                    <span class="metric-desc">Pitch + loudness dynamism</span>
                                 </div>
                             </div>
                         </div>
@@ -264,8 +263,8 @@
                                     <span class="metric-desc">Word emphasis patterns</span>
                                 </div>
                                 <div class="metric-item">
-                                    <span class="metric-name">Fluency</span>
-                                    <span class="metric-desc">Speed and smoothness balance</span>
+                                    <span class="metric-name">Pitch</span>
+                                    <span class="metric-desc">F0 variability</span>
                                 </div>
                                 <div class="metric-item highlight">
                                     <span class="metric-name">Intonation</span>
@@ -274,6 +273,10 @@
                                 <div class="metric-item highlight">
                                     <span class="metric-name">Expression</span>
                                     <span class="metric-desc">Composite expression score</span>
+                                </div>
+                                <div class="metric-item highlight">
+                                    <span class="metric-name">Paragraph Flow</span>
+                                    <span class="metric-desc">Sentence-to-sentence consistency</span>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +291,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Core Metrics</h2>
-                <p>Eight metrics designed to capture different aspects of reading fluency and expression</p>
+                <p>Seven metrics designed to capture different aspects of reading fluency and expression</p>
             </div>
 
             <div class="metrics-accordion">
@@ -461,62 +464,6 @@ rhythm_score = stability(cv)  # Piecewise mapping</pre>
                     </div>
                 </div>
 
-                <!-- Fluency -->
-                <div class="metric-card" data-metric="fluency">
-                    <button class="metric-card-header">
-                        <div class="metric-card-title">
-                            <span class="metric-letter">F</span>
-                            <span>Fluency</span>
-                        </div>
-                        <svg class="metric-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="metric-card-content">
-                        <div class="metric-section">
-                            <h4>What is this metric?</h4>
-                            <p>Combines reading speed and smoothness into a single measure.</p>
-                        </div>
-                        <div class="metric-section">
-                            <h4>Why do we use this metric?</h4>
-                            <p>Fluency is the foundation of reading comprehension. Fluent readers process text efficiently.</p>
-                        </div>
-                        <div class="metric-section">
-                            <h4>Formula</h4>
-                            <pre class="formula">fluency = (rate_score + pause_score) / 2</pre>
-                        </div>
-                        <div class="metric-section">
-                            <h4>Example</h4>
-                            <div class="example-box">
-                                <p><strong>Input:</strong> Rate: 2.5 words/sec, Pause ratio: 0.15</p>
-                                <p><strong>Calculation:</strong> (100 + 100) / 2</p>
-                                <p><strong>Result:</strong> 100/100</p>
-                            </div>
-                        </div>
-                        <div class="metric-section">
-                            <h4>Score Interpretation</h4>
-                            <div class="score-grid">
-                                <div class="score-item high">
-                                    <span class="score-range">80-100</span>
-                                    <span class="score-meaning">Excellent: Fluent, efficient reading</span>
-                                </div>
-                                <div class="score-item medium">
-                                    <span class="score-range">60-79</span>
-                                    <span class="score-meaning">Good: Generally fluent with minor issues</span>
-                                </div>
-                                <div class="score-item low">
-                                    <span class="score-range">0-39</span>
-                                    <span class="score-meaning">Poor: Significant fluency difficulties</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="metric-section">
-                            <h4>Educational Relevance</h4>
-                            <p>Fluency strongly correlates with comprehension. Research shows fluency is a primary indicator of reading proficiency.</p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Pitch -->
                 <div class="metric-card" data-metric="pitch">
                     <button class="metric-card-header">
@@ -651,14 +598,14 @@ rhythm_score = stability(cv)  # Piecewise mapping</pre>
                         </div>
                         <div class="metric-section">
                             <h4>Formula</h4>
-                            <pre class="formula">expression = 0.30 × Intonation + 0.25 × Stress + 0.20 × Fluency + 0.15 × Pause + 0.10 × Rhythm</pre>
+                            <pre class="formula">expression = 0.35 × Intonation + 0.30 × Stress + 0.20 × Pause Variation + 0.15 × Rhythm</pre>
                         </div>
                         <div class="metric-section">
                             <h4>Example</h4>
                             <div class="example-box">
-                                <p><strong>Input:</strong> Intonation: 70, Stress: 65, Fluency: 80, Pause: 75, Rhythm: 85</p>
-                                <p><strong>Calculation:</strong> 0.30 × 70 + 0.25 × 65 + 0.20 × 80 + 0.15 × 75 + 0.10 × 85</p>
-                                <p><strong>Result:</strong> 73/100</p>
+                                <p><strong>Input:</strong> Intonation: 70, Stress: 65, Pause Variation: 75, Rhythm: 85</p>
+                                <p><strong>Calculation:</strong> 0.35 × 70 + 0.30 × 65 + 0.20 × 75 + 0.15 × 85</p>
+                                <p><strong>Result:</strong> 71/100</p>
                             </div>
                         </div>
                         <div class="metric-section">
@@ -707,14 +654,14 @@ rhythm_score = stability(cv)  # Piecewise mapping</pre>
                         </div>
                         <div class="metric-section">
                             <h4>Formula</h4>
-                            <pre class="formula">paragraph = 0.30 × Expression + 0.20 × Intonation + 0.20 × Fluency + 0.15 × Stress + 0.10 × Pause + 0.05 × Rhythm</pre>
+                            <pre class="formula">paragraph = 0.30 × Expression + 0.25 × Intonation + 0.20 × Stress + 0.15 × Pause + 0.10 × Rhythm</pre>
                         </div>
                         <div class="metric-section">
                             <h4>Example</h4>
                             <div class="example-box">
-                                <p><strong>Input:</strong> Expression: 73, Intonation: 57, Fluency: 85, Stress: 71, Pause: 78, Rhythm: 92</p>
-                                <p><strong>Calculation:</strong> 0.30 × 73 + 0.20 × 57 + 0.20 × 85 + 0.15 × 71 + 0.10 × 78 + 0.05 × 92</p>
-                                <p><strong>Result:</strong> 73/100</p>
+                                <p><strong>Input:</strong> Expression: 71, Intonation: 57, Stress: 71, Pause: 78, Rhythm: 92</p>
+                                <p><strong>Calculation:</strong> 0.30 × 71 + 0.25 × 57 + 0.20 × 71 + 0.15 × 78 + 0.10 × 92</p>
+                                <p><strong>Result:</strong> 70/100</p>
                             </div>
                         </div>
                         <div class="metric-section">
@@ -806,13 +753,6 @@ rhythm_score = stability(cv)  # Piecewise mapping</pre>
                             <td>Requires F0 + energy extraction</td>
                         </tr>
                         <tr>
-                            <td><strong>Fluency</strong></td>
-                            <td>Rate + pause ratio combination</td>
-                            <td>Speech rate analysis, pause detection</td>
-                            <td>Combined metric</td>
-                            <td>Age-dependent thresholds not implemented</td>
-                        </tr>
-                        <tr>
                             <td><strong>Pitch</strong></td>
                             <td>Range + variability scoring</td>
                             <td>F0 tracking, pitch analysis</td>
@@ -828,17 +768,24 @@ rhythm_score = stability(cv)  # Piecewise mapping</pre>
                         </tr>
                         <tr>
                             <td><strong>Expression</strong></td>
-                            <td>Weighted combination of 5 metrics</td>
+                            <td>Weighted combination of 4 metrics</td>
                             <td>No direct equivalent</td>
                             <td>Unique capability</td>
                             <td>Weighted combination</td>
                         </tr>
                         <tr>
-                            <td><strong>Paragraph</strong></td>
-                            <td>Sentence aggregation model</td>
+                            <td><strong>Sentence</strong></td>
+                            <td>Intonation + contour + expression + rhythm</td>
+                            <td>No direct equivalent</td>
+                            <td>Sentence-level scoring</td>
+                            <td>Requires F0 intonation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Paragraph Flow</strong></td>
+                            <td>Sentence consistency + pace consistency</td>
                             <td>No direct equivalent</td>
                             <td>Unique capability</td>
-                            <td>Complex aggregation</td>
+                            <td>Requires 3+ sentences</td>
                         </tr>
                     </tbody>
                 </table>
