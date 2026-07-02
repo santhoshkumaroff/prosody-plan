@@ -296,7 +296,7 @@ window.addEventListener('scroll', throttle(() => {
 /**
  * Console branding
  */
-console.log('%c Prosody Intelligence Framework v1.5 ', 
+console.log('%c Prosody Intelligence Framework (current) ', 
     'background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: bold;');
 console.log('%c Production Candidate | Engineering Validated ', 
     'background: #22c55e; color: white; padding: 5px 10px; border-radius: 3px; font-size: 12px;');
